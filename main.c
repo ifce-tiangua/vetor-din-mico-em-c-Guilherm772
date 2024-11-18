@@ -5,7 +5,7 @@ int main(){
     int tamanho, i;
     scanf("%d", &tamanho);
     
-    vetor = (int*)malloc(tamanho * sizeoff(int));
+    vetor = (int*)malloc(tamanho * sizeof(int));
     
     if (tamanho == 0){
         printf("[vazio]");
@@ -15,7 +15,7 @@ int main(){
         }
         printf("[");
         for(i = 0; i < tamanho; i++){
-            printf("%d ", &vetor[i]);
+            printf("%d ",vetor[i]);
             if(i<tamanho-1){
                 printf(", ");
                 }
